@@ -47,7 +47,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\diceScripts.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Board\TileManager.cs" />
+     <Compile Include="Assets\Scripts\Stock.cs" />
+     <Compile Include="Assets\Scripts\Board\Tile.cs" />
+     <Compile Include="Assets\Scripts\Game\GameControl.cs" />
+     <Compile Include="Assets\Scripts\Game\GameData.cs" />
+     <Compile Include="Assets\Scripts\Board\PropertyTile.cs" />
+     <Compile Include="Assets\Scripts\DiceScripts.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
