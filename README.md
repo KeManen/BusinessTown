@@ -4,6 +4,7 @@ A videogame prototype made in unity inspired by monopoly
 
 
 Structure overview:
+```
 GameControl - - handles functions as the skeleton
 |_GameData - Singleton - keeps track of game objects
     |_PlayerData - - keeps track of player assets
@@ -11,6 +12,6 @@ GameControl - - handles functions as the skeleton
     |_TileManager - - keeps track of tiles in the board
         |_PropertyTile - -
             |_Tile - - Base tile class
-
+```
 PlayerMovement
 Stocks
