@@ -14,8 +14,16 @@ public class GameControl:ScriptableObject{
         int currentPlayerTileID = gameData.GetPlayerCurrentTile(playerID).GetID();
         int nextPlayerTileID = (currentPlayerTileID + moveAmount) % gameData.GetTileManager().GetTileAmount();
         gameData.SetPlayerCurrentTile(playerID, nextPlayerTileID);
+        UpdatePlayersVector3Location();
     }
 
+    private void UpdatePlayersVector3Location(){
+        Dictionary<PlayerData, Tile> playerTileMap = gameData.GetPlayerTileMap();
+        foreach(PlayerData player in playerTileMap.Keys){
+            Tile tile = playerTileMap[player];
+            player.GetTransformPlayer().transform.position = tile.GetVector3LoctionForID(player.GetID());
+        }
+    }
 
     // Start is called before the first frame update
     void Start(){

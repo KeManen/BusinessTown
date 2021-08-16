@@ -34,13 +34,16 @@ public sealed class GameData:ScriptableObject{
         playerTileMap[GetPlayerDataFromID(playerID)] = tileManager.GetTile(tileID);
     }
 
+    public Dictionary<PlayerData, Tile> GetPlayerTileMap(){
+        return playerTileMap;
+    }
+
     private PlayerData GetPlayerDataFromID(int playerID){
         foreach(PlayerData player in playerTileMap.Keys){
             if(player.GetID() == playerID){
                 return player;
             }
         }
-        Debug.Log("Cum");
         return null;
     }
 

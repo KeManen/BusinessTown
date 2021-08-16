@@ -13,5 +13,4 @@ GameControl - - handles functions as the skeleton
         |_PropertyTile - -
             |_Tile - - Base tile class
 ```
-PlayerMovement
 Stocks

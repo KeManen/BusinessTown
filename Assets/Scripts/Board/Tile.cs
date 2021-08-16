@@ -20,8 +20,14 @@ public class Tile : MonoBehaviour{
         return tileID;
     }
 
+    /*
     //returns a list of vector3 playerlocation
     public List<Vector3> GetPlayerLocations(){
         return vector3PlayerLocations;
+    }
+    */
+
+    public Vector3 GetVector3LoctionForID(int playerID){
+        return vector3PlayerLocations[playerID];
     }
 }
