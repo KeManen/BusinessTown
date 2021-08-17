@@ -12,13 +12,13 @@ public class Player : MonoBehaviour{
         public ArrayList Stocks; //Stock
     }
 
-    [SerializableField] private PlayerStats playerStats;
+    [SerializeField] private PlayerStats playerStats;
 
     public Player(int playerID, int startMoney){
         playerStats.ID = playerID;
         playerStats.Money = startMoney;
         playerStats.Properties = new ArrayList();
-        playerStats.Stock = new ArrayList();
+        playerStats.Stocks = new ArrayList();
     }
 
     //TODO add full value calculations

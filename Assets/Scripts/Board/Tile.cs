@@ -12,7 +12,7 @@ public class Tile : MonoBehaviour{
         public List<Vector3> vector3PlayerLocations;
     }
 
-    [SerializableField] private TileStats tileStats;
+    [SerializeField] private TileStats tileStats;
 
     public Tile(int tileID, Vector3 location1, Vector3 location2, Vector3 location3, Vector3 location4){
         this.tileStats.ID = tileID;
