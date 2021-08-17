@@ -45,6 +45,7 @@
      <Compile Include="Assets\Scripts\Board\PropertyTile.cs" />
      <Compile Include="Assets\Scripts\diceScripts.cs" />
      <Compile Include="Assets\Scripts\Lobby\Lobby.cs" />
+     <Compile Include="Assets\Scripts\Board\DrawTile.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
