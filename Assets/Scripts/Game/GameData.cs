@@ -6,14 +6,14 @@ public sealed class GameData:ScriptableObject{
     
     //Singleton
     private static readonly GameData gameDataSingleton = new GameData();
-    private Dictionary<PlayerData, Tile> playerTileMap;
+    private Dictionary<Player, Tile> playerTileMap;
     private TileManager tileManager;
 
 
     static GameData(){}
     private GameData(){
         //TODO expand skeleton
-        playerTileMap = new Dictionary<PlayerData, Tile>();
+        playerTileMap = new Dictionary<Player, Tile>();
         tileManager = new TileManager();
     }
 
@@ -27,19 +27,19 @@ public sealed class GameData:ScriptableObject{
 
     //return Tile player is assigned to else null
     public Tile GetPlayerCurrentTile(int playerID){
-        return playerTileMap[GetPlayerDataFromID(playerID)];
+        return playerTileMap[GetPlayerFromID(playerID)];
     }
 
     public void SetPlayerCurrentTile(int playerID, int tileID){
-        playerTileMap[GetPlayerDataFromID(playerID)] = tileManager.GetTile(tileID);
+        playerTileMap[GetPlayerFromID(playerID)] = tileManager.GetTile(tileID);
     }
 
-    public Dictionary<PlayerData, Tile> GetPlayerTileMap(){
+    public Dictionary<Player, Tile> GetPlayerTileMap(){
         return playerTileMap;
     }
 
-    private PlayerData GetPlayerDataFromID(int playerID){
-        foreach(PlayerData player in playerTileMap.Keys){
+    private Player GetPlayerFromID(int playerID){
+        foreach(Player player in playerTileMap.Keys){
             if(player.GetID() == playerID){
                 return player;
             }

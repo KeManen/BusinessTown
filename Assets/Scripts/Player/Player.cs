@@ -3,14 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerData : MonoBehaviour{
+public class Player : MonoBehaviour{
     private int playerID;
     public Transform playerTransform;
     private int playerMoney;
     ArrayList playerProperties; //PropertyTile
     ArrayList playerStock; //Stock
 
-    public PlayerData(int playerID, int startMoney){
+    public Player(int playerID, int startMoney){
         this.playerID = playerID;
         playerMoney = startMoney;
         playerProperties = new ArrayList();
