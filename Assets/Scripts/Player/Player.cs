@@ -4,49 +4,53 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour{
-    private int playerID;
-    public Transform playerTransform;
-    private int playerMoney;
-    ArrayList playerProperties; //PropertyTile
-    ArrayList playerStock; //Stock
+    [Serializable] public struct PlayerStats{
+        public int ID;
+        public Transform Transform;
+        public int Money;
+        public ArrayList Properties; //PropertyTile
+        public ArrayList Stocks; //Stock
+    }
+
+    [SerializableField] private PlayerStats playerStats;
 
     public Player(int playerID, int startMoney){
-        this.playerID = playerID;
-        playerMoney = startMoney;
-        playerProperties = new ArrayList();
-        playerStock = new ArrayList();
+        playerStats.ID = playerID;
+        playerStats.Money = startMoney;
+        playerStats.Properties = new ArrayList();
+        playerStats.Stock = new ArrayList();
     }
 
     //TODO add full value calculations
     public int GetPlayerValue(){
-        return playerMoney;
+        return playerStats.Money;
     }
 
     public int GetPlayerMoney(){
-        return playerMoney;
+        return playerStats.Money;
     }
 
     //Note changeAmount can be negative to inflict a cost
     public void ChangeMoney(int changeAmount){
-        playerMoney += changeAmount; 
+        playerStats.Money += changeAmount; 
     }
 
     //returns ArrayList<PropertyTiles>
     public ArrayList GetProperties(){
-        return playerProperties;
+        return playerStats.Properties;
     }
 
 
     //returns ArrayList<Stock>
     public ArrayList GetStocks(){
-        return playerStock;
+        return playerStats.Stocks;
     }
 
     public int GetID(){
-        return playerID;
+        return playerStats.ID;
     }
 
     public Transform GetTransformPlayer(){
-        return playerTransform;
+        return playerStats.Transform;
     }
 }
