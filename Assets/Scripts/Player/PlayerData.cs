@@ -1,13 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerData : MonoBehaviour{
+    private int playerID;
+    public Transform playerTransform;
     private int playerMoney;
     ArrayList playerProperties; //PropertyTile
     ArrayList playerStock; //Stock
 
-    public PlayerData(int startMoney){
+    public PlayerData(int playerID, int startMoney){
+        this.playerID = playerID;
         playerMoney = startMoney;
         playerProperties = new ArrayList();
         playerStock = new ArrayList();
@@ -36,5 +40,13 @@ public class PlayerData : MonoBehaviour{
     //returns ArrayList<Stock>
     public ArrayList GetStocks(){
         return playerStock;
+    }
+
+    public int GetID(){
+        return playerID;
+    }
+
+    public Transform GetTransformPlayer(){
+        return playerTransform;
     }
 }
