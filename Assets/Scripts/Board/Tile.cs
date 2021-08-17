@@ -14,11 +14,8 @@ public class Tile : MonoBehaviour{
 
     [SerializeField] private TileStats tileStats;
 
-    public Tile(int tileID, Vector3 location1, Vector3 location2, Vector3 location3, Vector3 location4){
-        this.tileStats.ID = tileID;
-        tileStats.vector3PlayerLocations = new List<Vector3>(){
-            location1, location2, location3, location4
-        };
+    public Tile(){
+        tileStats.vector3PlayerLocations = GeneratePlayerLocations();
     }
     
 
@@ -26,14 +23,61 @@ public class Tile : MonoBehaviour{
         return tileStats.ID;
     }
 
-    /*
-    //returns a list of vector3 playerlocation
-    public List<Vector3> GetPlayerLocations(){
-        return vector3PlayerLocations;
-    }
-    */
-
     public Vector3 GetVector3LoctionForID(int playerID){
         return tileStats.vector3PlayerLocations[playerID];
+    }
+
+    private List<Vector3> GeneratePlayerLocations(){
+        List<Vector3> playerLocations = new List<Vector3>();
+        
+        int x = transform.position.x;
+        int y = transform.position.y;
+        int z = transform.position.z;
+
+        int scaleMultiplier = 8/9;
+        int offsetY = 0;
+
+        int minScale = Math.Min(transform.scale.x, transform.scale.z);
+        
+        /* Generating the player positions
+                    x
+                 ________
+                |        |
+                |        |
+            z   | A    B |
+                |        |
+                | C    D |
+                |________|
+        */
+
+        //A
+        playerLocations.Add(new Vector3(
+            x - (minScale * scaleMultiplier) / 2,
+            y + offsetY,
+            z
+        ));
+        
+        //B
+        playerLocations.Add(new Vector3(
+            x + (minScale * scaleMultiplier) / 2,
+            y + offsetY,
+            z
+        ));
+
+        //C
+        playerLocations.Add(new Vector3(
+            x - (minScale * scaleMultiplier) / 2,
+            y + offsetY,
+            z - (minScale * scaleMultiplier)
+        ));
+
+        //D
+        playerLocations.Add(new Vector3(
+            x + (minScale * scaleMultiplier) / 2,
+            y + offsetY,
+            z - (minScale * scaleMultiplier)
+        ));
+        
+        return playerLocations;
     }
 }
