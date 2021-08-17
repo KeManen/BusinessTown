@@ -18,8 +18,8 @@ public class GameControl:ScriptableObject{
     }
 
     private void UpdatePlayersVector3Location(){
-        Dictionary<PlayerData, Tile> playerTileMap = gameData.GetPlayerTileMap();
-        foreach(PlayerData player in playerTileMap.Keys){
+        Dictionary<Player, Tile> playerTileMap = gameData.GetPlayerTileMap();
+        foreach(Player player in playerTileMap.Keys){
             Tile tile = playerTileMap[player];
             player.GetTransformPlayer().transform.position = tile.GetVector3LoctionForID(player.GetID());
         }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,18 +6,23 @@ using UnityEngine;
 
 //TODO add logic to bind with a tileObject
 public class Tile : MonoBehaviour{
-    protected int tileID;
-    private List<Vector3> vector3PlayerLocations;
+
+    [Serializable] public struct TileStats{
+        public int ID;
+        public List<Vector3> vector3PlayerLocations;
+    }
+
+    [SerializeField] private TileStats tileStats;
 
     public Tile(int tileID, Vector3 location1, Vector3 location2, Vector3 location3, Vector3 location4){
-        this.tileID = tileID;
-        vector3PlayerLocations = new List<Vector3>(){
+        this.tileStats.ID = tileID;
+        tileStats.vector3PlayerLocations = new List<Vector3>(){
             location1, location2, location3, location4
         };
     }    
 
     public int GetID(){
-        return tileID;
+        return tileStats.ID;
     }
 
     /*
@@ -27,6 +33,6 @@ public class Tile : MonoBehaviour{
     */
 
     public Vector3 GetVector3LoctionForID(int playerID){
-        return vector3PlayerLocations[playerID];
+        return tileStats.vector3PlayerLocations[playerID];
     }
 }

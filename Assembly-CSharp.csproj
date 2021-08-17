@@ -48,7 +48,6 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Board\TileManager.cs" />
      <Compile Include="Assets\Scripts\Stock.cs" />
      <Compile Include="Assets\Scripts\Board\Tile.cs" />
