@@ -18,7 +18,6 @@ public class Tile : MonoBehaviour{
         tileStats.vector3PlayerLocations = GeneratePlayerLocations();
     }
     
-
     public int GetID(){
         return tileStats.ID;
     }
