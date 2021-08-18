@@ -10,6 +10,7 @@ GameControl - - handles functions as the skeleton
     |_Player - - keeps track of player assets
     |_BoardData - - keeps track of board state and value
     |_TileManager - - keeps track of tiles in the board
+        |_DrawTile - -
         |_PropertyTile - -
             |_Tile - - Base tile class
 ```

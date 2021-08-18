@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PropertyTile : Tile{
-    int tileValue;
+    [SerializeField] int tileValue;
 
     public PropertyTile(int startValue):base(){
         tileValue = startValue;
