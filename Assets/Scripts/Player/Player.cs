@@ -8,8 +8,8 @@ public class Player : MonoBehaviour{
         public int ID;
         public Transform Transform;
         public int Money;
-        public ArrayList Properties; //PropertyTile
-        public ArrayList Stocks; //Stock
+        public List<PropertyTile> Properties;
+        public Dictionary<Stock, int> Stocks;
     }
 
     [SerializeField] private PlayerStats playerStats;
@@ -17,16 +17,23 @@ public class Player : MonoBehaviour{
     public Player(int playerID, int startMoney){
         playerStats.ID = playerID;
         playerStats.Money = startMoney;
-        playerStats.Properties = new ArrayList();
-        playerStats.Stocks = new ArrayList();
+        playerStats.Properties = new List<PropertyTile>();
+        playerStats.Stock = new Dictionary<Stock, int>();
     }
 
     //TODO add full value calculations
-    public int GetPlayerValue(){
-        return playerStats.Money;
+    public int GetValue(){
+        int value = playerStats.Money;
+        foreach (PropertyTile property in playerStats.Properties){
+            value += property.GetValue();
+        }
+        foreach (Stock stock in playerStats.Stocks.Keys){
+            value += stock.GetValue() * playerStats.Stocks[stock];
+        }
+        return value;
     }
 
-    public int GetPlayerMoney(){
+    public int GetMoney(){
         return playerStats.Money;
     }
 
@@ -35,14 +42,11 @@ public class Player : MonoBehaviour{
         playerStats.Money += changeAmount; 
     }
 
-    //returns ArrayList<PropertyTiles>
-    public ArrayList GetProperties(){
+    public List<PropertyTile> GetProperties(){
         return playerStats.Properties;
     }
 
-
-    //returns ArrayList<Stock>
-    public ArrayList GetStocks(){
+    public Dictionary<Stock, int> GetStocks(){
         return playerStats.Stocks;
     }
 
