@@ -18,7 +18,7 @@ public class Player : MonoBehaviour{
         playerStats.ID = playerID;
         playerStats.Money = startMoney;
         playerStats.Properties = new List<PropertyTile>();
-        playerStats.Stock = new Dictionary<Stock, int>();
+        playerStats.Stocks = new Dictionary<Stock, int>();
     }
 
     //TODO add full value calculations
