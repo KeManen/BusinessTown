@@ -9,34 +9,28 @@ public class Tile : MonoBehaviour{
 
     [Serializable] public struct TileStats{
         public int ID;
-        public List<Vector3> vector3PlayerLocations;
     }
+
+    private List<Vector3> playerLocations;
 
     [SerializeField] private TileStats tileStats;
 
-    public Tile(){
-        tileStats.vector3PlayerLocations = GeneratePlayerLocations();
-    }
-    
-    public int GetID(){
-        return tileStats.ID;
-    }
-
-    public Vector3 GetVector3LoctionForID(int playerID){
-        return tileStats.vector3PlayerLocations[playerID];
-    }
-
-    private List<Vector3> GeneratePlayerLocations(){
-        List<Vector3> playerLocations = new List<Vector3>();
+    void Start(){
         
-        int x = transform.position.x;
-        int y = transform.position.y;
-        int z = transform.position.z;
+        //////////////////////////////////////////////////////////////
+        //Generating player locations in a tile for 4 players
+        //////////////////////////////////////////////////////////////
 
-        int scaleMultiplier = 8/9;
-        int offsetY = 0;
+        playerLocations = new List<Vector3>();
+        
+        float x = transform.position.x;
+        float y = transform.position.y;
+        float z = transform.position.z;
 
-        int minScale = Math.Min(transform.scale.x, transform.scale.z);
+        float scaleMultiplier = 8/9;
+        float offsetY = 0;
+
+        float minScale = Math.Min(transform.lossyScale.x, transform.lossyScale.z);
         
         /* Generating the player positions
                     x
@@ -76,7 +70,15 @@ public class Tile : MonoBehaviour{
             y + offsetY,
             z - (minScale * scaleMultiplier)
         ));
-        
-        return playerLocations;
+
+        //////////////////////////////////////////////////////
+    }
+    
+    public int GetID(){
+        return tileStats.ID;
+    }
+
+    public Vector3 GetVector3LoctionForID(int playerID){
+        return playerLocations[playerID];
     }
 }
