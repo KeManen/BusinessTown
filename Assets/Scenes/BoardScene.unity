@@ -132,13 +132,26 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 693970519}
+  - component: {fileID: 693970518}
   m_Layer: 0
-  m_Name: gameControllObject
+  m_Name: GameControlObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &693970518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693970517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48446dd56d10fda4f8901f27f5070c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &693970519
 Transform:
   m_ObjectHideFlags: 0
@@ -151,7 +164,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &995355452
 GameObject:
@@ -415,9 +428,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2093728247}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 693970518}
+        m_TargetAssemblyTypeName: GameControl, Assembly-CSharp
+        m_MethodName: StartTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -707,49 +720,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &2093728247
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2093728249}
-  - component: {fileID: 2093728248}
-  m_Layer: 0
-  m_Name: diceGameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2093728248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093728247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c5fe37839ac9f48bff7fbc6c7b9bb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &2093728249
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093728247}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2093822400
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,8 +847,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats:
     ID: 0
-    Transform: {fileID: 0}
     Money: 0
+    Properties: []
+    TileID: 0
 --- !u!1001 &3494755070066448771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -910,6 +881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TileCorner (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1520292933802604060, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 2041356166607402612, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_TagString
       value: Tile
@@ -931,6 +906,10 @@ PrefabInstance:
       value: Tile
       objectReference: {fileID: 0}
     - target: {fileID: 2793101971787871636, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821363589039362421, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_TagString
       value: Tile
       objectReference: {fileID: 0}
@@ -1034,6 +1013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TileCorner (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 6646730622471742180, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6650224431695781809, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_TagString
       value: Tile
@@ -1043,6 +1026,10 @@ PrefabInstance:
       value: Board
       objectReference: {fileID: 0}
     - target: {fileID: 7062271145699365855, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7190970468869946516, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_TagString
       value: Tile
       objectReference: {fileID: 0}

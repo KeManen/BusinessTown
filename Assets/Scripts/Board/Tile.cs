@@ -73,12 +73,12 @@ public class Tile : MonoBehaviour{
 
         //////////////////////////////////////////////////////
     }
-    
+
     public int GetID(){
         return tileStats.ID;
     }
 
-    public Vector3 GetVector3LoctionForID(int playerID){
+    public Vector3 GetVector3Loction(int playerID){
         return playerLocations[playerID];
     }
 }

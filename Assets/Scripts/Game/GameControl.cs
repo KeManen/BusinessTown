@@ -2,32 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameControl:ScriptableObject{
+public class GameControl : MonoBehaviour{
     private GameData gameData;
+    private int turnPlayerID;
 
-    public GameControl(){
-        gameData = GameData.Instance;
+    public void StartTurn(){
+        MovePlayer(turnPlayerID, DiceScripts.Roll2Dice());
+        //Do other turn stuff
+
     }
 
     //Note moveAmount can be negative to go backwards
     public void MovePlayer(int playerID, int moveAmount){
-        int currentPlayerTileID = gameData.GetPlayerCurrentTile(playerID).GetID();
-        int nextPlayerTileID = (currentPlayerTileID + moveAmount) % gameData.GetTileManager().GetTileAmount();
-        gameData.SetPlayerCurrentTile(playerID, nextPlayerTileID);
-        UpdatePlayersVector3Location();
-    }
+        //Calculate and update ID
+        Player player = gameData.GetPlayerFromID(playerID);
+        int nextTileID = (player.GetTileID() + moveAmount) % gameData.GetTileAmount();
+        player.SetTileID(nextTileID);
 
-    private void UpdatePlayersVector3Location(){
-        Dictionary<Player, Tile> playerTileMap = gameData.GetPlayerTileMap();
-        foreach(Player player in playerTileMap.Keys){
-            Tile tile = playerTileMap[player];
-            player.GetTransformPlayer().transform.position = tile.GetVector3LoctionForID(player.GetID());
-        }
+        //Update Vector3 location
+        player.UpdateTransformPosition(gameData.GetTileFromID(nextTileID).GetVector3Loction(playerID));
+
     }
 
     // Start is called before the first frame update
     void Start(){
-        
+        gameData = (GameData) gameObject.GetComponent(typeof(GameData));
+        turnPlayerID = 0;
     }
 
     // Update is called once per frame

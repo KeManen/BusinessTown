@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class DiceScripts : MonoBehaviour{
     
-    public static void Roll2Dice(){
-        RollNDF(2,6);
-        return;
+    public static int Roll2Dice(){
+        int[] values = RollNDF(2,6);
+        int sum = 0;
+        foreach (int face in values){
+            sum += face;
+        }
+        return sum;
     }
 
     //roll N Number of dice with largest face value of F
@@ -16,7 +20,6 @@ public class DiceScripts : MonoBehaviour{
         for(int i = 0; i<number_of_dice; i++){
             dice_array[i] = UnityEngine.Random.Range(1, largest_face_value); 
         }
-        Debug.Log(dice_array.ToString());
         return dice_array;
     }
 }

@@ -6,19 +6,21 @@ using UnityEngine;
 public class Player : MonoBehaviour{
     [Serializable] public struct PlayerStats{
         public int ID;
-        public Transform Transform;
         public int Money;
         public List<PropertyTile> Properties;
         public Dictionary<Stock, int> Stocks;
+
+        public int TileID;
     }
 
     [SerializeField] private PlayerStats playerStats;
 
-    public Player(int playerID, int startMoney){
-        playerStats.ID = playerID;
+    //Needed?
+    public Player(int startMoney){
         playerStats.Money = startMoney;
         playerStats.Properties = new List<PropertyTile>();
         playerStats.Stocks = new Dictionary<Stock, int>();
+        playerStats.TileID = 0;
     }
 
     //TODO add full value calculations
@@ -54,7 +56,16 @@ public class Player : MonoBehaviour{
         return playerStats.ID;
     }
 
-    public Transform GetTransformPlayer(){
-        return playerStats.Transform;
+
+    public int GetTileID(){
+        return playerStats.TileID;
+    }
+
+    public void SetTileID(int tileID){
+        playerStats.TileID = tileID;
+    }
+
+    public void UpdateTransformPosition(Vector3 newLocation){
+        gameObject.transform.position = newLocation;
     }
 }
