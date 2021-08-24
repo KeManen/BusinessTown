@@ -5,10 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tile
-  - LobbyPlayer0
-  - LobbyPlayer1
-  - LobbyPlayer2
-  - LobbyPlayer3
+  - LobbyPlayers
   layers:
   - Default
   - TransparentFX

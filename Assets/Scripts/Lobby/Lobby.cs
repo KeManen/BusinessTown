@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 public class Lobby : MonoBehaviour
 {
+    private GameObject objectLobbyPlayers;
     [SerializeField]
     private Button btnStart;
     // Start is called before the first frame update
     void Start()
-    {
-        btnStart.onClick.AddListener(btnStartOnClick);
+    {   
+        objectLobbyPlayers = GameObject.FindWithTag("LobbyPlayers");
+
+        btnStart.onClick.AddListener(BtnStartOnClick);
     }
 
     // Update is called once per frame
@@ -19,8 +22,15 @@ public class Lobby : MonoBehaviour
         
     }
 
-    void btnStartOnClick()
+    private void BtnStartOnClick()
     {
+        LobbyPlayer[] playerScripts = GetComponentsInChildren<LobbyPlayer>();
+
+        foreach (LobbyPlayer script in playerScripts){
+            Debug.Log(script.GetPlayerName());
+            Debug.Log(script.GetPlayerColor());
+        }
+
         Debug.Log("Starting game...");
     }
 }
