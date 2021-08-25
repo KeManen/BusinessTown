@@ -67,5 +67,6 @@ public class Player : MonoBehaviour{
 
     public void UpdateTransformPosition(Vector3 newLocation){
         gameObject.transform.position = newLocation;
+        gameObject.transform.rotation = UnityEngine.Random.rotation;
     }
 }

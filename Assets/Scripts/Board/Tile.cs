@@ -28,7 +28,7 @@ public class Tile : MonoBehaviour{
         float z = transform.position.z;
 
         float scaleMultiplier = 8/9;
-        float offsetY = 0;
+        float offsetY = 4;
 
         float minScale = Math.Min(transform.lossyScale.x, transform.lossyScale.z);
         
