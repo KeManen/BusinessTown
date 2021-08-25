@@ -3,17 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Stock : MonoBehaviour{
-    private int stockValue;
+    [Serializable] public struct StockStats{
+        public int districtID;
+        public int stockValue;
+    }
+    [SerializeField] private StockStats stockStats;
 
-    public Stock(int startValue){
-        stockValue = startValue;
+    public Stock(int startValue, int districtID){
+        stockStats.stockValue = startValue;
+        stockStats.districtID = districtID;
     }
 
     public int GetValue(){
-        return stockValue;
+        return stockStats.stockValue;
     }
 
     public void SetValue(int newValue){
-        stockValue = newValue;
+        stockStats.stockValue = newValue;
+    }
+
+    public int GetDistrictID(){
+        return stockStats.districtID;
     }
 }

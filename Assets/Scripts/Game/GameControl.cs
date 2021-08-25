@@ -24,6 +24,11 @@ public class GameControl : MonoBehaviour{
 
     }
 
+    //note changeAmout can be negative to go downwards
+    public void UpdateStockValues(int changeAmount){
+        //TODO implement
+    }
+
     // Start is called before the first frame update
     void Start(){
         gameData = (GameData) gameObject.GetComponent(typeof(GameData));
