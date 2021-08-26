@@ -53,10 +53,6 @@ public class GameData : MonoBehaviour{
 
     //Basic Getters
     public Player GetPlayerFromID(int playerID){
-        foreach (int playerID2 in playerIDMap.Keys){
-            Player player;
-            playerIDMap.TryGetValue(playerID2, out player);
-        }
         return playerIDMap[playerID];
     }
 
