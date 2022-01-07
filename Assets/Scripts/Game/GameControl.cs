@@ -11,14 +11,33 @@ public class GameControl : MonoBehaviour{
     public void StartTurn(){ //is called by roll dice button
         MovePlayer(turnPlayerID, DiceScripts.Roll2Dice());
         diceScripts.HideBtn();
+
         //Do other turn stuff
 
+        TileAction();
         EndTurn();
+    }
+
+    public void TileAction(){
+        Player player = gameData.GetPlayerFromID(turnPlayerID);
+        GameObject tileObject = gameData.GetTileFromID(player.GetTileID()).gameObject;
+
+        //property tile action
+        PropertyTile propertyTile = (PropertyTile) tileObject.GetComponent(typeof(PropertyTile));
+        if(propertyTile != null){
+            //TODO buy menu
+            propertyTile.BuildHouse();
+            return;
+        }
+        
+        //other tile actions
     }
 
     public void EndTurn(){
         //check win conditions
         //set turnPlayerID to next player
+        //other end of turn stuff
+
         diceScripts.ShowBtn();
     }
 

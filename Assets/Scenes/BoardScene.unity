@@ -123,6 +123,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &249954589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2172774223982771423, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+  m_PrefabInstance: {fileID: 3494755070066448771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &249954595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249954589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileStats:
+    ID: 0
+  housePrefab: {fileID: 1908256255}
+  value: 10000
+  district: 0
 --- !u!1 &693970517
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,6 +216,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diceButton: {fileID: 1515491877}
+--- !u!1 &759806357 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8152581033587038182, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+  m_PrefabInstance: {fileID: 3494755070066448771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &759806358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759806357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileStats:
+    ID: 0
+  housePrefab: {fileID: 1908256255}
+  value: 80000
+  district: 1
 --- !u!1 &995355452
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,6 +369,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1122163965 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1500380734908337572, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+  m_PrefabInstance: {fileID: 3494755070066448771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1122163966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122163965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileStats:
+    ID: 0
+  housePrefab: {fileID: 1908256255}
+  value: 50000
+  district: 0
+--- !u!1 &1253394744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8735002820614228907, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+  m_PrefabInstance: {fileID: 3494755070066448771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1253394750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253394744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileStats:
+    ID: 0
+  housePrefab: {fileID: 1908256255}
+  value: 500000
+  district: 7
 --- !u!1 &1305504006
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +682,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1515491877}
   m_CullTransparentMesh: 1
+--- !u!1 &1563357324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2225204092683961606, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+  m_PrefabInstance: {fileID: 3494755070066448771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1563357325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563357324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileStats:
+    ID: 0
+  housePrefab: {fileID: 1908256255}
+  value: 100000
+  district: 1
 --- !u!1 &1706538256
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +853,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 49.504, y: 0, z: 0}
+--- !u!1 &1775035486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4978021695007976120, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+  m_PrefabInstance: {fileID: 3494755070066448771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1775035487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775035486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileStats:
+    ID: 0
+  housePrefab: {fileID: 1908256255}
+  value: 65000
+  district: 0
 --- !u!1 &1889268165
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +968,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1908256255 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5161479114833043908, guid: 55a285a944f152d4ca4c9af5ad183e35, type: 3}
+  m_PrefabInstance: {fileID: 1469616120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2081884974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -893,6 +1030,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f7047033d42fca41955e5f47aa54bd7, type: 3}
+--- !u!1 &2092188792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7062271145699365855, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+  m_PrefabInstance: {fileID: 3494755070066448771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2092188793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092188792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileStats:
+    ID: 0
+  housePrefab: {fileID: 1908256255}
+  value: 120000
+  district: 1
 --- !u!4 &2099993708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2280542791933875127, guid: 9f7047033d42fca41955e5f47aa54bd7, type: 3}
