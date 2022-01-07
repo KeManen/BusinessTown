@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 693970519}
   - component: {fileID: 693970518}
   - component: {fileID: 693970520}
+  - component: {fileID: 693970521}
   m_Layer: 0
   m_Name: GameControlObject
   m_TagString: Untagged
@@ -273,6 +274,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df6c9102f72f450458544a17527f1b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceButton: {fileID: 0}
+--- !u!114 &693970521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693970517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c5fe37839ac9f48bff7fbc6c7b9bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   diceButton: {fileID: 1515491877}
@@ -499,7 +513,7 @@ GameObject:
   - component: {fileID: 1515491880}
   - component: {fileID: 1515491879}
   m_Layer: 5
-  m_Name: Button
+  m_Name: DiceRollButton
   m_TagString: DiceButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
