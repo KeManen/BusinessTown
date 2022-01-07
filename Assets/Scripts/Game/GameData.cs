@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameData : MonoBehaviour{
     public struct BoardStats{
@@ -9,6 +10,7 @@ public class GameData : MonoBehaviour{
     }
     private BoardStats boardStats;
 
+    [SerializeField] private GameObject diceButton;
     private Dictionary<int, Player> playerIDMap;
     private Dictionary<int, Tile> tileIDMap;
     private Dictionary<int, Stock> stockIDMap;    
@@ -58,6 +60,10 @@ public class GameData : MonoBehaviour{
             playerIDMap.TryGetValue(playerID2, out player);
         }
         return playerIDMap[playerID];
+    }
+
+    public GameObject GetDiceButton(){
+        return diceButton;
     }
 
     public Tile GetTileFromID(int tileID){
