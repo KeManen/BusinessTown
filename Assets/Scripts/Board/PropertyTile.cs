@@ -12,13 +12,41 @@ public class PropertyTile : Tile{
     }
 
     public void BuildHouse(){
-        //TODO take into account the orientation of property tile 
         //TODO build hotel
-        Transform transfrom = GetTileTransfrom();
-        Vector3 position = transfrom.position;
-        position.y = position.y + 1.5f;
-        position.z = position.z + 3;
-        Instantiate(housePrefab, position, Quaternion.identity);
+        //TODO check if house is already built on tile
+        Transform tileTransform = GetTileTransfrom();
+        Vector3 position = transform.position;
+        Quaternion rotation = transform.rotation;
+        Vector3 eulerAngles = rotation.eulerAngles;
+        Debug.Log(eulerAngles);
+
+        float offsetZ = 0;
+        float offsetX = 0;
+
+        switch(eulerAngles.y){
+            case 0:
+                offsetZ = 5f;
+                offsetX = 0f;
+                break;
+            case 90:
+                offsetZ = 0f;
+                offsetX = 5f;
+                break;
+            case 180:
+                offsetZ = -5F;
+                offsetX = 0f;
+                break;
+            case 270:
+                offsetZ = 0f;
+                offsetX = -5f;
+                break;
+        }
+
+        position.y = position.y + 1;
+        position.x = position.x + offsetX;
+        position.z = position.z + offsetZ;
+        GameObject house = Instantiate(housePrefab, position, rotation);
+        house.transform.parent = tileTransform;
     }
 
     //public getters
