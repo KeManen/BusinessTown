@@ -143,6 +143,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 7
 --- !u!1 &249954589 stripped
@@ -165,6 +166,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 10000
   district: 0
 --- !u!1 &256116001 stripped
@@ -187,6 +189,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 5
 --- !u!1 &283450523 stripped
@@ -209,6 +212,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 6
 --- !u!1 &338061888 stripped
@@ -231,6 +235,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 4
 --- !u!1 &465382357 stripped
@@ -253,6 +258,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 3
 --- !u!1 &493352788 stripped
@@ -275,6 +281,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 7
 --- !u!1 &617062672 stripped
@@ -297,6 +304,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 3
 --- !u!1 &693970517
@@ -342,7 +350,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &693970520
 MonoBehaviour:
@@ -390,6 +398,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 2
 --- !u!1 &759806357 stripped
@@ -412,6 +421,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 80000
   district: 1
 --- !u!1 &808234488 stripped
@@ -434,6 +444,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 4
 --- !u!1 &935236259 stripped
@@ -456,6 +467,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 4
 --- !u!1 &995355452
@@ -551,7 +563,7 @@ RectTransform:
   m_Children:
   - {fileID: 1515491878}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -578,6 +590,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 3
 --- !u!1 &1089240750
@@ -609,7 +622,7 @@ Transform:
   m_Children:
   - {fileID: 2099993708}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1122163965 stripped
 GameObject:
@@ -631,6 +644,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 50000
   district: 0
 --- !u!1 &1253394744 stripped
@@ -653,6 +667,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 7
 --- !u!1 &1305504006
@@ -754,6 +769,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 6
 --- !u!1 &1434061514 stripped
@@ -776,6 +792,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 2
 --- !u!1001 &1469616120
@@ -988,6 +1005,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 6
 --- !u!1 &1563357324 stripped
@@ -1010,6 +1028,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 100000
   district: 1
 --- !u!1 &1574457358 stripped
@@ -1032,6 +1051,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 5
 --- !u!1 &1706538256
@@ -1098,7 +1118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1710811079
 GameObject:
@@ -1203,6 +1223,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 65000
   district: 0
 --- !u!1 &1889268165
@@ -1296,7 +1317,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1908256255 stripped
 GameObject:
@@ -1323,6 +1344,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 5
 --- !u!1 &2070411400 stripped
@@ -1345,6 +1367,7 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 500000
   district: 2
 --- !u!1001 &2081884974
@@ -1424,12 +1447,75 @@ MonoBehaviour:
   tileStats:
     ID: 0
   housePrefab: {fileID: 1908256255}
+  hotelPrefab: {fileID: 2118208208}
   value: 120000
   district: 1
 --- !u!4 &2099993708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2280542791933875127, guid: 9f7047033d42fca41955e5f47aa54bd7, type: 3}
   m_PrefabInstance: {fileID: 2081884974}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2118208207
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2774111123030465777, guid: c6ad117bb5ffbfb4eaa733a3e4e776a7, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774111123030465777, guid: c6ad117bb5ffbfb4eaa733a3e4e776a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.958305
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774111123030465777, guid: c6ad117bb5ffbfb4eaa733a3e4e776a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774111123030465777, guid: c6ad117bb5ffbfb4eaa733a3e4e776a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -34.180233
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774111123030465777, guid: c6ad117bb5ffbfb4eaa733a3e4e776a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774111123030465777, guid: c6ad117bb5ffbfb4eaa733a3e4e776a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774111123030465777, guid: c6ad117bb5ffbfb4eaa733a3e4e776a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774111123030465777, guid: c6ad117bb5ffbfb4eaa733a3e4e776a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774111123030465777, guid: c6ad117bb5ffbfb4eaa733a3e4e776a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774111123030465777, guid: c6ad117bb5ffbfb4eaa733a3e4e776a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774111123030465777, guid: c6ad117bb5ffbfb4eaa733a3e4e776a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856625359270102273, guid: c6ad117bb5ffbfb4eaa733a3e4e776a7, type: 3}
+      propertyPath: m_Name
+      value: Hotel
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6ad117bb5ffbfb4eaa733a3e4e776a7, type: 3}
+--- !u!1 &2118208208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5856625359270102273, guid: c6ad117bb5ffbfb4eaa733a3e4e776a7, type: 3}
+  m_PrefabInstance: {fileID: 2118208207}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3494755070066448771
 PrefabInstance:
@@ -1756,7 +1842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3928968514222722764, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3928968514222722764, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_LocalPosition.x
