@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameData : MonoBehaviour{
     public struct BoardStats{
         public int tileAmount;
+        public int playerCount;
         public int districtAmount;
     }
     private BoardStats boardStats;
@@ -54,13 +55,13 @@ public class GameData : MonoBehaviour{
 
         Debug.Log("Gamedata/boardstats.districtAmount:"+boardStats.districtAmount);
         Debug.Log("Gamedata/boardstats.tileAmount:"+boardStats.tileAmount);
+        boardStats.playerCount = playerIDMap.Count;
     }
 
     //Basic Getters
     public Player GetPlayerFromID(int playerID){
         return playerIDMap[playerID];
     }
-
     public GameObject GetDiceButton(){
         return diceButton;
     }
@@ -72,6 +73,10 @@ public class GameData : MonoBehaviour{
     //Other Methods
     public int GetTileAmount(){
         return boardStats.tileAmount;
+    }
+
+    public int GetPlayerCount(){
+        return boardStats.playerCount;
     }
 
     public int GetDistrictAmount(){
