@@ -5,12 +5,10 @@ using UnityEngine.UI;
 
 public class LobbyPlayer : MonoBehaviour
 {
-    private string playerName;
-    private int playerColor;
-    [SerializeField]
-    private InputField inputName;
-    [SerializeField]
-    private Dropdown dropdownColor;
+    [field: SerializeField] public string Name {get; set;}
+    [field: SerializeField] public int Color {get; set;}
+    [field: SerializeField] private InputField inputName;
+    [field: SerializeField] private Dropdown dropdownColor;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,25 +24,15 @@ public class LobbyPlayer : MonoBehaviour
 
     }
 
-    private void SubmitName(string n)
+    private void SubmitName(string name)
     {
-        playerName = n;
-        Debug.Log(playerName);
+        Name = name;
+        Debug.Log(Name);
     }
 
     private void SubmitColor(Dropdown c)
     {
-        playerColor = c.value;
-        Debug.Log(playerColor);
-    }
-
-    public string GetPlayerName()
-    {
-        return(playerName);
-    }
-
-    public int GetPlayerColor()
-    {
-        return(playerColor);
+        Color = c.value;
+        Debug.Log(Color);
     }
 }

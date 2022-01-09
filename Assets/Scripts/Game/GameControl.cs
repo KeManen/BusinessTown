@@ -21,7 +21,7 @@ public class GameControl : MonoBehaviour{
 
     public void TileAction(){
         Player player = gameData.GetPlayerFromID(turnPlayerID);
-        GameObject tileObject = gameData.GetTileFromID(player.GetTileID()).gameObject;
+        GameObject tileObject = gameData.GetTileFromID(player.TileId).gameObject;
 
         //property tile action
         PropertyTile propertyTile = (PropertyTile) tileObject.GetComponent(typeof(PropertyTile));
@@ -48,8 +48,8 @@ public class GameControl : MonoBehaviour{
         //Calculate and update ID
         Player player = gameData.GetPlayerFromID(playerID);
         Debug.Log(player);
-        int nextTileID = (player.GetTileID() + moveAmount) % gameData.GetTileAmount();
-        player.SetTileID(nextTileID);
+        int nextTileID = (player.TileId + moveAmount) % gameData.TileCount;
+        player.TileId = nextTileID;
 
         //Update Vector3 location
         player.UpdateTransformPosition(gameData.GetTileFromID(nextTileID).GetVector3Loction(playerID));
@@ -71,7 +71,7 @@ public class GameControl : MonoBehaviour{
         gameData = (GameData) gameObject.GetComponent(typeof(GameData));
         diceScripts = (DiceScripts) gameObject.GetComponent(typeof(DiceScripts));
         turnPlayerID = 0;
-        Debug.Log(gameData.GetTileAmount());
+        Debug.Log(gameData.TileCount);
     }
 
     // Update is called once per frame

@@ -6,15 +6,8 @@ using UnityEngine;
 
 //TODO add logic to bind with a tileObject
 public class Tile : MonoBehaviour{
-
-    [Serializable] public struct TileStats{
-        public int ID;
-    }
-
+    [field: SerializeField] public int Id {get; private set;}
     private List<Vector3> playerLocations;
-
-    [SerializeField] private TileStats tileStats;
-
     void Start(){
         
         //////////////////////////////////////////////////////////////
@@ -74,13 +67,9 @@ public class Tile : MonoBehaviour{
         //////////////////////////////////////////////////////
     }
 
-    //getters
+    //Getters
     public Transform GetTileTransfrom(){
         return (Transform) gameObject.GetComponent(typeof(Transform));
-    }
-
-    public int GetID(){
-        return tileStats.ID;
     }
 
     public Vector3 GetVector3Loction(int playerID){

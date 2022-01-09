@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class Lobby : MonoBehaviour
 {
     private GameObject objectLobbyPlayers;
-    [SerializeField]
-    private Button btnStart;
+    [SerializeField] private Button btnStart;
     // Start is called before the first frame update
     void Start()
     {   
@@ -27,8 +26,8 @@ public class Lobby : MonoBehaviour
         LobbyPlayer[] playerScripts = GetComponentsInChildren<LobbyPlayer>();
 
         foreach (LobbyPlayer script in playerScripts){
-            Debug.Log(script.GetPlayerName());
-            Debug.Log(script.GetPlayerColor());
+            Debug.Log(script.Name);
+            Debug.Log(script.Color);
         }
 
         Debug.Log("Starting game...");

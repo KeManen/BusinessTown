@@ -5,11 +5,11 @@ using UnityEngine;
 public class PropertyTile : Tile{
     [SerializeField] GameObject housePrefab; //has tag 'House'
     [SerializeField] GameObject hotelPrefab; //has tag 'Hotel'
-    [SerializeField] int value;
-    [SerializeField] int district; //0-7
+    [field: SerializeField] public int Value {get; private set;}
+    [field: SerializeField] public int DistrictId {get; private set;} //0-7
 
     public PropertyTile(int startValue):base(){
-        value = startValue;
+        Value = startValue;
     }
 
     public void BuildHouse(){
@@ -31,14 +31,5 @@ public class PropertyTile : Tile{
 
         //Move to top edge of the tile, take into account parent scaling.
         building.transform.localPosition = new Vector3(0f, 0.5f, 0.25f);
-    }
-
-    //public getters
-    public int GetValue(){
-        return value;
-    }
-
-    public int GetDistrictID(){
-        return district;
     }
 }

@@ -4,65 +4,43 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour{
-    [Serializable] public struct PlayerStats{
-        public int ID;
-        public int Money;
-        public List<PropertyTile> Properties;
-        public Dictionary<Stock, int> Stocks;
-
-        public int TileID;
-    }
-
-    [SerializeField] private PlayerStats playerStats;
+    [field: SerializeField] public int Id {get;}
+    [field: SerializeField] public int TileId {get; set;}
+    [field: SerializeField] public int Money {get; set;}
+    [SerializeField] private List<PropertyTile> Properties {get;}
+    [SerializeField] private Dictionary<Stock, int> Stocks {get;}
 
     //Needed?
     public Player(int startMoney){
-        playerStats.Money = startMoney;
-        playerStats.Properties = new List<PropertyTile>();
-        playerStats.Stocks = new Dictionary<Stock, int>();
-        playerStats.TileID = 0;
+        Money = startMoney;
+        Properties = new List<PropertyTile>();
+        Stocks = new Dictionary<Stock, int>();
+        TileId = 0;
     }
 
     //TODO add full value calculations
     public int GetValue(){
-        int value = playerStats.Money;
-        foreach (PropertyTile property in playerStats.Properties){
-            value += property.GetValue();
+        int value = Money;
+        foreach (PropertyTile property in Properties){
+            value += property.Value;
         }
-        foreach (Stock stock in playerStats.Stocks.Keys){
-            value += stock.GetValue() * playerStats.Stocks[stock];
+        foreach (Stock stock in Stocks.Keys){
+            value += stock.Value * Stocks[stock];
         }
         return value;
     }
 
-    public int GetMoney(){
-        return playerStats.Money;
-    }
-
     //Note changeAmount can be negative to inflict a cost
     public void ChangeMoney(int changeAmount){
-        playerStats.Money += changeAmount; 
+        Money += changeAmount; 
     }
 
     public List<PropertyTile> GetProperties(){
-        return playerStats.Properties;
+        return Properties;
     }
 
     public Dictionary<Stock, int> GetStocks(){
-        return playerStats.Stocks;
-    }
-
-    public int GetID(){
-        return playerStats.ID;
-    }
-
-
-    public int GetTileID(){
-        return playerStats.TileID;
-    }
-
-    public void SetTileID(int tileID){
-        playerStats.TileID = tileID;
+        return Stocks;
     }
 
     public void UpdateTransformPosition(Vector3 newLocation){
