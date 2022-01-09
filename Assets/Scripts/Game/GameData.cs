@@ -55,9 +55,9 @@ public class GameData : MonoBehaviour{
         TileCount = tileIDMap.Count;
         PlayerCount = playerIDMap.Count;
 
-        Debug.Log("Gamedata/boardstats.districtCount:"+DistrictCount);
-        Debug.Log("Gamedata/boardstats.tileCount:"+TileCount);
-        Debug.Log("Gamedata/boardstats.playerCount:"+PlayerCount);
+        Debug.Log("Gamedata/boardstats.DistrictCount:"+DistrictCount);
+        Debug.Log("Gamedata/boardstats.TileCount:"+TileCount);
+        Debug.Log("Gamedata/boardstats.PlayerCount:"+PlayerCount);
     }
 
     //Basic Getters
