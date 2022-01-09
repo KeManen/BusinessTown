@@ -36,7 +36,7 @@ public class GameControl : MonoBehaviour{
 
     public void EndTurn(){
         //check win conditions
-        //set turnPlayerID to next player
+        SetNextInOrderPlayer();
         //other end of turn stuff
 
         diceScripts.ShowBtn();
@@ -57,7 +57,7 @@ public class GameControl : MonoBehaviour{
     }
 
     public void SetNextInOrderPlayer(){
-        Debug.Log(players);
+        turnPlayerID = turnPlayerID < (players - 1) ? turnPlayerID + 1 : 0;
     }
 
     //note changeAmout can be negative to go downwards
@@ -71,7 +71,8 @@ public class GameControl : MonoBehaviour{
         gameData = (GameData) gameObject.GetComponent(typeof(GameData));
         diceScripts = (DiceScripts) gameObject.GetComponent(typeof(DiceScripts));
         turnPlayerID = 0;
-        Debug.Log(gameData.GetTileAmount());
+        //players = gameData.GetPlayerCount();
+        players = 2;
     }
 
     // Update is called once per frame
