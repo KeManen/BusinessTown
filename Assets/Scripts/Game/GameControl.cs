@@ -8,8 +8,8 @@ public class GameControl : MonoBehaviour{
     private DiceScripts diceScripts;
     private UserInterface ui;
     private int turnPlayerID;
-    private int players;
     private bool buyHouseBtnPressed;
+    private int Players {get; set;}
 
     public void StartTurn(){ //is called by roll dice button
         MovePlayer(turnPlayerID, DiceScripts.Roll2Dice());
@@ -25,8 +25,8 @@ public class GameControl : MonoBehaviour{
     public void MovePlayer(int playerID, int moveAmount){
         //Calculate and update ID
         Player player = gameData.GetPlayerFromID(playerID);
-        int nextTileID = (player.GetTileID() + moveAmount) % gameData.GetTileAmount();
-        player.SetTileID(nextTileID);
+        int nextTileID = (player.TileId + moveAmount) % gameData.TileCount;
+        player.TileId = nextTileID;
 
         //Update Vector3 location
         player.UpdateTransformPosition(gameData.GetTileFromID(nextTileID).GetVector3Loction(playerID));
@@ -35,7 +35,7 @@ public class GameControl : MonoBehaviour{
 
     public void TileAction(){
         Player player = gameData.GetPlayerFromID(turnPlayerID);
-        GameObject tileObject = gameData.GetTileFromID(player.GetTileID()).gameObject;
+        GameObject tileObject = gameData.GetTileFromID(player.TileId).gameObject;
 
         //property tile action
         PropertyTile propertyTile = (PropertyTile) tileObject.GetComponent(typeof(PropertyTile));
@@ -71,7 +71,7 @@ public class GameControl : MonoBehaviour{
     }
 
     public void SetNextInOrderPlayer(){
-        turnPlayerID = turnPlayerID < (players - 1) ? turnPlayerID + 1 : 0;
+        turnPlayerID = turnPlayerID < (Players - 1) ? turnPlayerID + 1 : 0;
     }
 
     //note changeAmout can be negative to go downwards
@@ -87,8 +87,10 @@ public class GameControl : MonoBehaviour{
         diceScripts = (DiceScripts) gameObject.GetComponent(typeof(DiceScripts));
         turnPlayerID = 0;
         //players = gameData.GetPlayerCount();
-        players = 2;
         buyHouseBtnPressed = false;
+        //players = gameData.PlayerCount;
+        Players = 2;
+        Debug.Log("GameControl.gameData.TileCount:"+gameData.TileCount);
     }
 
     // Update is called once per frame

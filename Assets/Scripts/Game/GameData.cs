@@ -4,56 +4,60 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameData : MonoBehaviour{
-    public struct BoardStats{
-        public int tileAmount;
-        public int playerCount;
-        public int districtAmount;
-    }
-    private BoardStats boardStats;
+    [SerializeField] private GameObject diceButton {get;} //Move to diceScipts.cs
     private Dictionary<int, Player> playerIDMap;
     private Dictionary<int, Tile> tileIDMap;
     private Dictionary<int, Stock> stockIDMap;    
+    [field: SerializeField] public int TileCount {get; private set;}
+    [field: SerializeField] public int PlayerCount {get; private set;}
+    [field: SerializeField] public int DistrictCount {get; private set;}
 
     void Start(){
         playerIDMap = new Dictionary<int, Player>();
         tileIDMap = new Dictionary<int, Tile>();
+        stockIDMap = new Dictionary<int, Stock>();
 
         //Fill playerIDMap
         GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject playerObject in playerObjects){
             Player player = (Player) playerObject.GetComponent(typeof(Player));
-            playerIDMap.Add(player.GetID(), player);
+            playerIDMap.Add(player.Id, player);
         }
 
         //Fill tileIDMap
         GameObject[] tileObjects = GameObject.FindGameObjectsWithTag("Tile");
         foreach (GameObject tileObject in tileObjects){
             Tile tile = (Tile) tileObject.GetComponent(typeof(Tile));
-            tileIDMap.Add(tile.GetID(), tile);
+            tileIDMap.Add(tile.Id, tile);
         }
 
         //Fill stockIDMap
         //Getting amount of districts
-        int amountOfDistrict = 0;
+        int amountOfDistricts = 0;
         foreach (Tile tile in tileIDMap.Values){
             if(tile.GetType() == typeof(PropertyTile)){
                 PropertyTile propertyTile = (PropertyTile) tile;
-                if(propertyTile.GetDistrictID() > amountOfDistrict){
-                    amountOfDistrict = propertyTile.GetDistrictID();
+                if(propertyTile.DistrictId > amountOfDistricts){
+                    amountOfDistricts = propertyTile.DistrictId;
                 }
             }
         }
-        for (int i = 0; i < amountOfDistrict; i++){
+
+        //TODO implement working stock
+        /*
+        for (int i = 0; i < amountOfDistricts; i++){
             stockIDMap.Add(i, new Stock(1000, i)); 
-        }
+        }*/
 
-        //Filling boarStats
-        boardStats.districtAmount = amountOfDistrict;
-        boardStats.tileAmount = tileIDMap.Count;
+        //Filling boardStats
+        
+        DistrictCount = amountOfDistricts;
+        TileCount = tileIDMap.Count;
+        PlayerCount = playerIDMap.Count;
 
-        Debug.Log("Gamedata/boardstats.districtAmount:"+boardStats.districtAmount);
-        Debug.Log("Gamedata/boardstats.tileAmount:"+boardStats.tileAmount);
-        boardStats.playerCount = playerIDMap.Count;
+        Debug.Log("Gamedata/boardstats.DistrictCount:"+DistrictCount);
+        Debug.Log("Gamedata/boardstats.TileCount:"+TileCount);
+        Debug.Log("Gamedata/boardstats.PlayerCount:"+PlayerCount);
     }
 
     //Basic Getters
@@ -63,18 +67,5 @@ public class GameData : MonoBehaviour{
 
     public Tile GetTileFromID(int tileID){
         return tileIDMap[tileID];
-    }
-
-    //Other Methods
-    public int GetTileAmount(){
-        return boardStats.tileAmount;
-    }
-
-    public int GetPlayerCount(){
-        return boardStats.playerCount;
-    }
-
-    public int GetDistrictAmount(){
-        return boardStats.districtAmount;
     }
 }
