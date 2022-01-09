@@ -42,9 +42,12 @@ public class GameData : MonoBehaviour{
                 }
             }
         }
+
+        //TODO implement working stock
+        /*
         for (int i = 0; i < amountOfDistricts; i++){
             stockIDMap.Add(i, new Stock(1000, i)); 
-        }
+        }*/
 
         //Filling boardStats
         

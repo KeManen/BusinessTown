@@ -140,12 +140,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 29
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 7
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 7
 --- !u!1 &249954589 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2172774223982771423, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
@@ -163,12 +162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 1
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 10000
-  district: 0
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 0
 --- !u!1001 &252129481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,6 +176,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6320773902057128098, guid: 9f7047033d42fca41955e5f47aa54bd7, type: 3}
       propertyPath: playerStats.ID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6320773902057128098, guid: 9f7047033d42fca41955e5f47aa54bd7, type: 3}
+      propertyPath: <Id>k__BackingField
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2280542791933875121, guid: 9f7047033d42fca41955e5f47aa54bd7, type: 3}
@@ -251,12 +253,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 23
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 5
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 5
 --- !u!1 &283450523 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8669127552595916315, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
@@ -274,12 +275,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 27
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 6
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 6
 --- !u!1 &338061888 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3778911109996779624, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
@@ -297,12 +297,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 17
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 4
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 4
 --- !u!1 &465382357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4927830711537251802, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
@@ -320,12 +319,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 13
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 3
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 3
 --- !u!1 &493352788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2588082218551616962, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
@@ -343,12 +341,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 30
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 7
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 7
 --- !u!1 &617062672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6050132692130668450, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
@@ -366,12 +363,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 14
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 3
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 3
 --- !u!1 &693970517
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +379,6 @@ GameObject:
   - component: {fileID: 693970519}
   - component: {fileID: 693970518}
   - component: {fileID: 693970520}
-  - component: {fileID: 693970521}
   m_Layer: 0
   m_Name: GameControlObject
   m_TagString: Untagged
@@ -429,20 +424,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6c9102f72f450458544a17527f1b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diceButton: {fileID: 0}
---- !u!114 &693970521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 693970517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c5fe37839ac9f48bff7fbc6c7b9bb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diceButton: {fileID: 1515491877}
+  <TileCount>k__BackingField: 0
+  <PlayerCount>k__BackingField: 0
+  <DistrictCount>k__BackingField: 0
 --- !u!1 &739878579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8259469004157655792, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
@@ -460,12 +444,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 9
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 2
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 2
 --- !u!1 &759806357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8152581033587038182, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
@@ -483,12 +466,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 5
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 80000
-  district: 1
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 1
 --- !u!1 &808234488 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6650224431695781809, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
@@ -506,12 +488,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 18
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 4
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 4
 --- !u!1 &935236259 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7474675830576461190, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
@@ -529,12 +510,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 19
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 4
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 4
 --- !u!1 &995355452
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,12 +632,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 15
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 3
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 3
 --- !u!1 &1089240750
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,12 +686,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 2
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 50000
-  district: 0
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 0
 --- !u!1 &1253394744 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8735002820614228907, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
@@ -730,12 +708,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 31
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 7
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 7
 --- !u!1 &1305504006
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,12 +809,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 26
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 6
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 6
 --- !u!1 &1434061514 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4170546505788763468, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
@@ -855,12 +831,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 10
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 2
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 2
 --- !u!4 &1468317529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2280542791933875127, guid: 9f7047033d42fca41955e5f47aa54bd7, type: 3}
@@ -1073,12 +1048,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 25
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 6
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 6
 --- !u!1 &1563357324 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2225204092683961606, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
@@ -1096,12 +1070,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 6
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 100000
-  district: 1
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 1
 --- !u!1 &1574457358 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4028963823634470180, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
@@ -1119,12 +1092,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 21
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 5
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 5
 --- !u!1 &1706538256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,12 +1263,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 3
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 65000
-  district: 0
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 0
 --- !u!1 &1889268165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,12 +1383,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 22
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 5
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 5
 --- !u!1 &2070411400 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3545089852891629219, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
@@ -1435,12 +1405,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 11
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 500000
-  district: 2
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 2
 --- !u!1001 &2081884974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1515,12 +1484,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c161f11bb42d804fb0c75086bec7161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileStats:
-    ID: 0
+  <Id>k__BackingField: 7
   housePrefab: {fileID: 1908256255}
   hotelPrefab: {fileID: 2118208208}
-  value: 120000
-  district: 1
+  <Value>k__BackingField: 0
+  <DistrictId>k__BackingField: 1
 --- !u!4 &2099993708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2280542791933875127, guid: 9f7047033d42fca41955e5f47aa54bd7, type: 3}
@@ -1595,6 +1563,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 160633236805604598, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 481620544728861781, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 532631328320010221, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 758486176538277130, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_TagString
       value: Tile
@@ -1618,6 +1598,10 @@ PrefabInstance:
     - target: {fileID: 758486176538277134, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 977593028947543702, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1048574277795640632, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_TagString
@@ -1718,6 +1702,10 @@ PrefabInstance:
     - target: {fileID: 1520292933802604060, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_TagString
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815102535230590787, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2041356166607402608, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1851,6 +1839,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 3028013436036567957, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120316731560866678, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3494755068455071963, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_TagString
       value: Tile
@@ -1910,6 +1906,10 @@ PrefabInstance:
     - target: {fileID: 3778911109996779628, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3787907955310373692, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: Id
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3928968514222722764, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_RootOrder
@@ -2047,6 +2047,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 4629778120858281451, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 4927830711537251802, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_TagString
       value: Tile
@@ -2082,6 +2086,10 @@ PrefabInstance:
     - target: {fileID: 4978021695007976120, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_TagString
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731898436075952301, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5828335770995436214, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_TagString
@@ -2127,6 +2135,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6242931710274326769, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328981238228914067, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 6646730622471742180, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_Name
       value: TileCorner (16)
@@ -2166,6 +2182,10 @@ PrefabInstance:
     - target: {fileID: 7062271145699365855, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_TagString
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103843790913662383, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7190970468869946516, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_TagString
@@ -2227,9 +2247,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 8105723423606310621, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 8152581033587038182, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_TagString
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193207963547724182, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8259469004157655792, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
       propertyPath: m_TagString
@@ -2327,5 +2355,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 977593028947543702, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 532631328320010221, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 6242931710274326769, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 7103843790913662383, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 961419968491257679, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 8193207963547724182, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 7001305522739978425, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 3050877553138341637, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 2487277251855236330, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 4629778120858281451, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 67527172964293070, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 2866337380345684513, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 5763607971990267384, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 8362418266542051279, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 2621064520745807725, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 1144617533473606717, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 2106397970316513137, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 8527368867894401231, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 3852040559561854941, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 7780188914694278226, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 3931132503607955362, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 3484820860542984075, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
+    - {fileID: 7678307245803712994, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b8e5f1aea9e2e9c40a833de85ca907e2, type: 3}

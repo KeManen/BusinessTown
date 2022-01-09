@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour{
-    [field: SerializeField] public int Id {get;}
+    [field: SerializeField] public int Id {get; private set;}
     [field: SerializeField] public int TileId {get; set;}
     [field: SerializeField] public int Money {get; set;}
     [SerializeField] private List<PropertyTile> Properties {get;}
