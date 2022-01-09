@@ -6,17 +6,31 @@ using UnityEngine.UI;
 public class GameControl : MonoBehaviour{
     private GameData gameData;
     private DiceScripts diceScripts;
+    private UserInterface ui;
     private int turnPlayerID;
     private int players;
+    private bool buyHouseBtnPressed;
 
     public void StartTurn(){ //is called by roll dice button
         MovePlayer(turnPlayerID, DiceScripts.Roll2Dice());
-        diceScripts.HideBtn();
+        ui.HideDiceBtn();
 
         //Do other turn stuff
 
         TileAction();
         EndTurn();
+    }
+
+    //Note moveAmount can be negative to go backwards
+    public void MovePlayer(int playerID, int moveAmount){
+        //Calculate and update ID
+        Player player = gameData.GetPlayerFromID(playerID);
+        int nextTileID = (player.GetTileID() + moveAmount) % gameData.GetTileAmount();
+        player.SetTileID(nextTileID);
+
+        //Update Vector3 location
+        player.UpdateTransformPosition(gameData.GetTileFromID(nextTileID).GetVector3Loction(playerID));
+
     }
 
     public void TileAction(){
@@ -26,12 +40,26 @@ public class GameControl : MonoBehaviour{
         //property tile action
         PropertyTile propertyTile = (PropertyTile) tileObject.GetComponent(typeof(PropertyTile));
         if(propertyTile != null){
-            //TODO buy menu
-            propertyTile.BuildHouse();
+            StartCoroutine(PropertyMenu(propertyTile));
             return;
         }
         
         //other tile actions
+    }
+
+    IEnumerator PropertyMenu(PropertyTile property){
+        ui.ShowBuyHouseBtn();
+        GameObject btn = ui.GetBuyHouseBtn();
+        while(!buyHouseBtnPressed){
+            yield return null;
+        }
+        property.BuildHouse();
+        ui.HideBuyHouseBtn();
+        buyHouseBtnPressed = false;
+    }
+
+    public void BuyHouseBtnOnClick(){
+        buyHouseBtnPressed = true;
     }
 
     public void EndTurn(){
@@ -39,21 +67,7 @@ public class GameControl : MonoBehaviour{
         SetNextInOrderPlayer();
         //other end of turn stuff
 
-        diceScripts.ShowBtn();
-    }
-
-    //Note moveAmount can be negative to go backwards
-    public void MovePlayer(int playerID, int moveAmount){
-        Debug.Log(playerID);
-        //Calculate and update ID
-        Player player = gameData.GetPlayerFromID(playerID);
-        Debug.Log(player);
-        int nextTileID = (player.GetTileID() + moveAmount) % gameData.GetTileAmount();
-        player.SetTileID(nextTileID);
-
-        //Update Vector3 location
-        player.UpdateTransformPosition(gameData.GetTileFromID(nextTileID).GetVector3Loction(playerID));
-
+        ui.ShowDiceBtn();
     }
 
     public void SetNextInOrderPlayer(){
@@ -69,10 +83,12 @@ public class GameControl : MonoBehaviour{
     // Start is called before the first frame update
     void Start(){
         gameData = (GameData) gameObject.GetComponent(typeof(GameData));
+        ui = (UserInterface) gameObject.GetComponent(typeof(UserInterface));
         diceScripts = (DiceScripts) gameObject.GetComponent(typeof(DiceScripts));
         turnPlayerID = 0;
         //players = gameData.GetPlayerCount();
         players = 2;
+        buyHouseBtnPressed = false;
     }
 
     // Update is called once per frame
