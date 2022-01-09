@@ -49,7 +49,7 @@ public class GameData : MonoBehaviour{
             stockIDMap.Add(i, new Stock(1000, i)); 
         }
 
-        //Filling boarStats
+        //Filling boardStats
         boardStats.districtAmount = amountOfDistrict;
         boardStats.tileAmount = tileIDMap.Count;
 
