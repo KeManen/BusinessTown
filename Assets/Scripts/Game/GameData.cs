@@ -51,6 +51,9 @@ public class GameData : MonoBehaviour{
         //Filling boarStats
         boardStats.districtAmount = amountOfDistrict;
         boardStats.tileAmount = tileIDMap.Count;
+
+        Debug.Log("Gamedata/boardstats.districtAmount:"+boardStats.districtAmount);
+        Debug.Log("Gamedata/boardstats.tileAmount:"+boardStats.tileAmount);
     }
 
     //Basic Getters
