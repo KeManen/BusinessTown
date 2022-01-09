@@ -74,6 +74,11 @@ public class Tile : MonoBehaviour{
         //////////////////////////////////////////////////////
     }
 
+    //getters
+    public Transform GetTileTransfrom(){
+        return (Transform) gameObject.GetComponent(typeof(Transform));
+    }
+
     public int GetID(){
         return tileStats.ID;
     }

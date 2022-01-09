@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Tile
   - LobbyPlayers
+  - DiceButton
+  - House
+  - Hotel
   layers:
   - Default
   - TransparentFX

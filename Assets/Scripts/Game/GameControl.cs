@@ -1,21 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameControl : MonoBehaviour{
     private GameData gameData;
+    private DiceScripts diceScripts;
     private int turnPlayerID;
 
-    public void StartTurn(){
+    public void StartTurn(){ //is called by roll dice button
         MovePlayer(turnPlayerID, DiceScripts.Roll2Dice());
+        diceScripts.HideBtn();
+
         //Do other turn stuff
 
+        TileAction();
+        EndTurn();
+    }
+
+    public void TileAction(){
+        Player player = gameData.GetPlayerFromID(turnPlayerID);
+        GameObject tileObject = gameData.GetTileFromID(player.GetTileID()).gameObject;
+
+        //property tile action
+        PropertyTile propertyTile = (PropertyTile) tileObject.GetComponent(typeof(PropertyTile));
+        if(propertyTile != null){
+            //TODO buy menu
+            propertyTile.BuildHouse();
+            return;
+        }
+        
+        //other tile actions
+    }
+
+    public void EndTurn(){
+        //check win conditions
+        //set turnPlayerID to next player
+        //other end of turn stuff
+
+        diceScripts.ShowBtn();
     }
 
     //Note moveAmount can be negative to go backwards
     public void MovePlayer(int playerID, int moveAmount){
+        Debug.Log(playerID);
         //Calculate and update ID
         Player player = gameData.GetPlayerFromID(playerID);
+        Debug.Log(player);
         int nextTileID = (player.GetTileID() + moveAmount) % gameData.GetTileAmount();
         player.SetTileID(nextTileID);
 
@@ -29,9 +60,11 @@ public class GameControl : MonoBehaviour{
         //TODO implement
     }
 
+
     // Start is called before the first frame update
     void Start(){
         gameData = (GameData) gameObject.GetComponent(typeof(GameData));
+        diceScripts = (DiceScripts) gameObject.GetComponent(typeof(DiceScripts));
         turnPlayerID = 0;
     }
 

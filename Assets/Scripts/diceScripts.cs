@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DiceScripts : MonoBehaviour{
+    [SerializeField] private GameObject diceButton;
     
     public static int Roll2Dice(){
         int[] values = RollNDF(2,6);
@@ -21,5 +22,18 @@ public class DiceScripts : MonoBehaviour{
             dice_array[i] = UnityEngine.Random.Range(1, largest_face_value); 
         }
         return dice_array;
+    }
+
+    public void ShowBtn(){
+        diceButton.SetActive(true);
+    }
+
+    public void HideBtn(){
+        diceButton.SetActive(false);
+    }
+
+    //getters
+    public GameObject GetDiceButton(){
+        return diceButton;
     }
 }
